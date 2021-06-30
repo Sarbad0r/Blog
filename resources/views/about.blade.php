@@ -1,11 +1,9 @@
-@extends('page.glav')
+@extends('/gir.glav')
 
 @section('title')
-О нас
+    О нас
 @endsection
 
 @section('Opisanie')
-
-<h1>О нас</h1>
-    
+    О нас
 @endsection

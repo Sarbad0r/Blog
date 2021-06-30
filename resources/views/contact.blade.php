@@ -1,11 +1,9 @@
-@extends('page.glav')
+@extends('/gir.glav')
 
 @section('title')
-Страница Контактов
+    Страница Контактов
 @endsection
 
 @section('Opisanie')
-
-<h1>Это Страница Контактов</h1>
-    
+    Страница Контактов
 @endsection

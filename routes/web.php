@@ -1,9 +1,39 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GoodController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FormController;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Route as RoutingRoute;
+
+
+Route::get('/', function () {
+    return view("welcome");
+});
+Route::get('/home', function () {
+    return view('home');
+})->name("home");
+Route::get('/contact', function () {
+    return view('contact');
+})->name("contact");
+Route::get('/about', function () {
+    return view('about');
+})->name("about");
+
+Route::prefix(['prefix' => 'category'], function () {
+    Route::get('category', [CategoryController::class, "index"]);
+    Route::get('category/crete', [CategoryController::class, "create"]);
+});
+Route::get('index1', function () {
+    return view("index1");
+});
+
+
+Route::post("index1", [GoodController::class, "lll"])->name("form");
+
 
 
 // Route::get('/', function () {
@@ -34,22 +64,3 @@ use Illuminate\Support\Facades\Route;
 //         // $categoria->save();
 //         // return$categoria;
 // });
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-// Route::get('/', function () {  
-// });
-
-Route::prefix(['prefix' => 'category'], function () {
-    Route::get('category', [CategoryController::class, "index"]);
-    Route::get('category/crete', [CategoryController::class, "create"]);
-});

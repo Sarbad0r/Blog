@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories = Category::where
+        // $categories = Category::where
     }
 
     /**
