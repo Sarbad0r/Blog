@@ -7,3 +7,4 @@
 @section('Opisanie')
     Это главная страница
 @endsection
+

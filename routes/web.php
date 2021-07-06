@@ -1,8 +1,7 @@
 <?php
-
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GoodController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FormController;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
@@ -23,6 +22,16 @@ Route::get('/about', function () {
     return view('about');
 })->name("about");
 
+Route::get('../index1', function () {
+    return view('index1');
+})->name("index1");
+
+Route::get('home', function () {
+    return view('home');
+})->name("home");
+
+
+
 Route::prefix(['prefix' => 'category'], function () {
     Route::get('category', [CategoryController::class, "index"]);
     Route::get('category/crete', [CategoryController::class, "create"]);
@@ -31,9 +40,7 @@ Route::get('index1', function () {
     return view("index1");
 });
 
-
 Route::post("index1", [GoodController::class, "lll"])->name("form");
-
 
 
 // Route::get('/', function () {

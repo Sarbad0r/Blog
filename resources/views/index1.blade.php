@@ -11,6 +11,11 @@
 </head>
 
 <body>
+
+    <div class="container">
+            <a href="{{ route("home") }}">Home</a>
+    </div>
+    
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -21,9 +26,7 @@
         </div>
     @endif
 
-
     <form action="{{ route('form') }}" method="post">
-
         <div class="form-group">
             @csrf
             <label for="text">Text</label>
@@ -35,6 +38,7 @@
             <button type="submit" class="btn btn-success">Go</button>
         </div>
     </form>
+
 </body>
 
 </html>
