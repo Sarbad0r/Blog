@@ -1,0 +1,119 @@
+.a{
+    text-decoration: none;
+    color: white;
+}
+@media only screen {
+    body {
+        background-image: url(peyzazh.jpg);
+        background-position: center;
+    }
+
+
+
+    .decorate {
+        text-decoration: none;
+        color: white;
+    }
+
+    .ZP {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .ZP:hover {
+        cursor: pointer;
+    }
+
+    .butt {
+        padding-left: 75px;
+        padding-top: 25px;
+    }
+
+    .voyti {
+        background-color: blue;
+        text-align: center;
+        width: 250px;
+        height: 35px;
+        color: white;
+        border-style: none;
+    }
+
+    .voyti :hover {
+        cursor: pointer;
+    }
+
+    .input {
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 20px;
+        width: 350px;
+        height: 30px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-width: 0.5px;
+
+    }
+
+    .register {
+
+        /* background-color: ; */
+        position: absolute;
+        top: 300px;
+        width: 400px;
+        height: 300px;
+
+    }
+
+    .vhod {
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 30px;
+    }
+
+    .vhod:hover {
+        cursor: pointer;
+    }
+
+    .top {
+        /* background-color:; */
+        width: 214.5px;
+        height: auto;
+        z-index: -1;
+    }
+
+    ul {
+        width: 200px;
+        padding: 0;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    ul li a {
+        color: aliceblue;
+        display: block;
+        padding: 0px 30px 40px 40px;
+        text-decoration: none;
+        list-style: none;
+        line-height: 30px;
+        flex-direction: row;
+        font-size: 15px;
+
+    }
+
+    li:hover {
+        cursor: alias;
+        background-color: #346325;
+        top: 10px;
+        transform: translate(7.5%, 0%);
+        list-style: none;
+        opacity: 5;
+    }
+
+    ul li a:checked {
+        opacity: white;
+    }
+}
