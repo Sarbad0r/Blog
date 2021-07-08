@@ -1,10 +1,12 @@
-@extends('/gir.glav')
-
+@extends('all')
 @section('title')
     Главная страница
 @endsection
 
 @section('Opisanie')
-    Это главная страница
+    <h1>Это Главная страница</h1>
 @endsection
 
+@section('Opisanie2')
+    <h2>Это просто правая сторона</h2>
+@endsection

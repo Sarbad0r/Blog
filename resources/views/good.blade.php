@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{route()}}"></a>
-    @foreach ($categories as $category)
-        <li>{{$category->name}}</li>
-    @endforeach
+    <h1>You haved finished a login</h1>
 </body>
 </html>
