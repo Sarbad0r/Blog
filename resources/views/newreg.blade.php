@@ -34,7 +34,7 @@
 
 
 
-    <a href="{{ route('glav') }}" class="glav">В главную</a>
+    <a href="{{ route('Login') }}" class="glav">В главную</a>
     <div class="min-vh-100 d-flex align-items-center ">
         <div class="container">
             <div class="row">
@@ -42,17 +42,18 @@
 
 
                     <div class=" p-4 p-lg-8 rounded-lg">
-
-
-
-
-
-
                         <form action="{{ route('Login') }}" method="POST">
                             {{-- @method('put'); --}}
                             @csrf
                             <h1 class="mb-2 text-white">Добро пожаловать</h1>
-                            <p class="mb-4 text-white">Войдите, используя свою учетную запись</p>
+                            <p class="mb-4 text-white">Пожалуйста регистрируйтесь</p>
+
+                            <div class="form-group">
+                                <label for="name" class="text-white">Имя </label>
+                                <input type="text" id="name" class="form-control border-0" placeholder="Введите имя"
+                                    required="" name="name">
+                            </div>
+
                             <div class="form-group">
                                 <label for="email" class="text-white">Эл.почта </label>
                                 <input type="email" id="email" class="form-control border-0" placeholder="Email address"
@@ -61,14 +62,24 @@
                             <div class="form-group mb-4">
                                 <label for="password" class="text-white">Пароль</label>
                                 <input type="password" id="password" class="form-control border-0"
-                                    placeholder="Password" required="">
+                                    placeholder="Password" required="" name="password">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="birthday" class="text-white">День рождение</label>
+                                <input type="date" id="birthday" class="form-control border-0"
+                                    placeholder="День рождение" required="" name="birthday">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="about" class="text-white">Расскажите о себе</label>
+                                <textarea name="ABOUT" id="about" class="form-control"
+                                    placeholder="Напишите что нибудь"></textarea>
                             </div>
 
                             <button class="btn btn-primary btn-block" type="submit">
-                                Войти
+                                Регистрация
                             </button>
                             <p>
-                                <a href="{{ route('newreg') }}" class="glav">Регистрация</a>
+                                <a href="{{ route('register') }}" class="glav">Уже есть аккаунт?</a>
                             </p>
                             {{-- <div class="d-lg-flex justify-content-between mt-4 mb-3 ">
                                 <p class="text-muted font-14">
