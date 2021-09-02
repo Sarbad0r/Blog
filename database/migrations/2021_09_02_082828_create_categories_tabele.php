@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRollbacksTable extends Migration
+class CreateCategoriesTabele extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateRollbacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('rollbacks', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string("password");
-            $table->string("login");
-            $table->text("textA");
+            $table->string('title');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateRollbacksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rollbacks');
+        Schema::dropIfExists('categories');
     }
 }
